@@ -23,3 +23,12 @@ let google = fetchUrl myCallback "http://google.com"
 // build a function with the callback baked in
 let fetchUrl2 = fetchUrl myCallback
 // test
+let google2 = fetchUrl2 "http://www.google.com"
+let bbc = fetchUrl2 "http://news.bbc.co.uk"
+
+let sites = ["http://www.bing.com";
+            "http://www.google.com";
+            "http://www.yahoo.com"]
+
+sites |> List.map fetchUrl2
+
